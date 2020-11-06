@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First program in React // Basic component in React</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+</head>
+<body>
+    <div id="app"></div>
+    <script type="text/babel">
+        class App extends React.Component{ 
+            render(){ // return must have only one root element 
+                return(
+                    <div className="App-content"> 
+                        <h1> Static data - First program in React</h1>
+                        <p> Random number - dynamic data - { Math.random() * 10}</p>
+                    </div>
+                );
+
+            }
+        }
+        ReactDOM.render(<App /> , document.getElementById("app"));
+    </script>
+</body>
+</html>
